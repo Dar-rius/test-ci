@@ -5,16 +5,12 @@ run-name: test-workflow
 on: [push]
 
 jobs:
-  check-test-app:
+    check-test-app:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - uses: actions/checkout@v4
-
-      - uses: actions/node@v3
-        with: 
-        node-version: '18'
-          
-      -run: yarn install
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/node@v3
+              with:
+                  node-version: '18'
+            - run: yarn install
