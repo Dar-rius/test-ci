@@ -8,8 +8,8 @@ jobs:
   check-test-app:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
-      - uses: action/node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/node@v3
         with: 
         node-version: '18'
       -run: yarn install
