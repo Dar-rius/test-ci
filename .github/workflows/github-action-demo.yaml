@@ -6,8 +6,11 @@ on: [push]
 
 jobs:
   check-test-app:
+
     runs-on: ubuntu-latest
+
     steps:
+
       - uses: actions/checkout@v4
 
       - uses: actions/node@v3
